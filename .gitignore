@@ -1,2 +1,5 @@
-desafio-dio-poo/*.class
-desafio-dio-poo/com/mqds/*/*.class
+*.swp
+*.class
+.gitignore
+#desafio-dio-poo/[*.class|*.swp]
+#desafio-dio-poo/com/mqds/*/[*.class|*.swp]
