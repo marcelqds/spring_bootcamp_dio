@@ -24,10 +24,35 @@ public class Main{
         mentoria1.setDescricao("Criando projeto em php");
         mentoria1.setData(LocalDate.now());
 
-        System.out.println(curso);
+       /* System.out.println(curso);
         System.out.println(curso1);
 
         System.out.println(mentoria);
-        System.out.println(mentoria1);
+        System.out.println(mentoria1);*/
+
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Java Developer");
+        bootcamp.setDescricao("Super bootcamp de java");
+        bootcamp.getConteudos().add(curso);
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(mentoria);
+        bootcamp.getConteudos().add(mentoria1);
+
+        Dev devUm = new Dev();
+        devUm.setNome("Dev Um");
+        devUm.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdos Inscritos: "+ devUm.getConteudoInscritos());
+        devUm.progredir();
+        System.out.println("Conteúdos Concluídos: "+ devUm.getConteudoConcluidos());
+        System.out.println("XP: "+ devUm.calcularTotalXp());
+
+        Dev devDois = new Dev();
+        devDois.setNome("Dev Dois");
+        devDois.inscreverBootcamp(bootcamp);
+        System.out.println("Conteúdos Inscritos: "+ devDois.getConteudoInscritos());
+        devDois.progredir();
+        System.out.println("Conteúdos Concluídos: "+ devDois.getConteudoConcluidos());
+        System.out.println("XP: "+ devDois.calcularTotalXp());
+
     }
 }

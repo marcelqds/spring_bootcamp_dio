@@ -1,5 +1,6 @@
 package com.mqds.dominio;
 
+//import com.mqds.dominio.*;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -10,17 +11,17 @@ public class Bootcamp{
     private String nome;
     private String descricao;
     private final LocalDate dataInicial = LocalDate.now();
-    private final LocalDate dataFinal = dataInicial.plusDays(45)
+    private final LocalDate dataFinal = dataInicial.plusDays(45);
     
-    private Set<Dev> devsInscritos = new HashSet<>();
-    private set<Conteudo> conteudos = LinkedHashSet<>();
+    private Set<Dev> devsInscritos = new HashSet<Dev>();
+    private Set<Conteudo> conteudos = new LinkedHashSet<Conteudo>();
 
     public void setNome(String nome){ this.nome = nome;}
     public void setDescricao(String descricao){this.descricao = descricao;}
-    public void setDevsIncritos(Set<Dev> devsIncritos){this.devsInscritos = devsInscritos;}
+    public void setDevsIncritos(Set<Dev> devsInscritos){this.devsInscritos = devsInscritos;}
     public void setConteudos(Set<Conteudo> conteudos){this.conteudos = conteudos;}
 
-    public String getTitulo(){ return titulo;}
+    public String getNome(){ return nome;}
     public String getDescricao(){ return descricao;}
     public LocalDate getDataInicial(){ return dataInicial;}
     public LocalDate getDataFinal(){ return dataFinal;}
@@ -28,10 +29,10 @@ public class Bootcamp{
     public Set<Conteudo> getConteudos(){ return conteudos;}
     
     @Override
-    public boolean equals(Objects o){
+    public boolean equals(Object o){
         if(this == o) return true;
         if(o == null || getClass() != o.getClass()) return false;
-        Bootcamp bootcamp = (Dev) o;
+        Bootcamp bootcamp = (Bootcamp) o;
         return Objects.equals(nome,bootcamp.nome) 
         && Objects.equals(descricao, bootcamp.descricao) 
         && Objects.equals(dataInicial, bootcamp.dataInicial)
