@@ -1,0 +1,10 @@
+br/com/dio/config/SecurityConfig.class
+br/com/dio/entity/Produto.class
+br/com/dio/controller/ProdutoControllerAdvice.class
+br/com/dio/exception/ProdutoPriceException.class
+br/com/dio/controller/ProdutoController.class
+br/com/dio/exception/ProdutoNullException.class
+br/com/dio/ServletInitializer.class
+br/com/dio/repository/ProdutoRepository.class
+br/com/dio/RestSpringApplication.class
+br/com/dio/service/ProdutoService.class
