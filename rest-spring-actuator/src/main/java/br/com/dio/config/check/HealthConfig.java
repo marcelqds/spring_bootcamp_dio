@@ -25,3 +25,5 @@ public class HealthConfig implements HealthIndicator {
     }
 
 }
+
+//https://codecentric.github.io/spring-boot-admin/2.6.6/
